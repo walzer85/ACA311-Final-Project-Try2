@@ -8,6 +8,8 @@ class Header extends Component {
                 <Navbar fixedTop inverse>
                     <Navbar.Header>
                         <Navbar.Brand>
+                            {/* Add this back in once I get back to a working state */}
+                            {/* <Image src="https://image.freepik.com/free-icon/drum-set-silhouette_318-41375.jpg" /> */}
                             <a href="#brand">Friends With Bands</a>
                         </Navbar.Brand>
                     </Navbar.Header>

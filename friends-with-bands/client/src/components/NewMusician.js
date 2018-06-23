@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form, FormGroup, Col, FormControl, Button, ControlLabel } from "react-bootstrap";
 
-class NewRequest extends Component {
+class NewMusician extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -15,14 +15,6 @@ class NewRequest extends Component {
       genre: '',
       example: ''
     };
-  }
-
-  getValidationState() {
-    const length = this.state.value.length;
-    if (length > 10) return 'success';
-    else if (length > 5) return 'warning';
-    else if (length > 0) return 'error';
-    return null;
   }
 
   handleChange(e) {
@@ -99,7 +91,7 @@ class NewRequest extends Component {
 
         <FormGroup controlId="formHorizontalEmail">
           <Col componentClass={ControlLabel} sm={2}>
-            Link to a page of you playing:
+            Link to a page of your Band:
           </Col>
           <Col sm={4}>
             <FormControl 
@@ -120,4 +112,4 @@ class NewRequest extends Component {
   }
 }
 
-export default NewRequest; 
+export default NewMusician; 
