@@ -38,11 +38,11 @@ function manageRequests(state =[], action){
   return state;
 }
 
-
+debugger;
 
 const rootReducer = combineReducers({
   musicians, requests, manageMusicians, manageRequests
-})
+});
 
 export default rootReducer;
 

@@ -1,5 +1,5 @@
 export default {
-  musicians :[],
+  musicians: [],
   requests: [],
   newMusician: {
     fisrtName: '',
