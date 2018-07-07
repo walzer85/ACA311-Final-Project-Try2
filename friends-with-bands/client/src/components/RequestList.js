@@ -16,13 +16,13 @@ class RequestList extends Component {
   
   render() {
     
-    const mapRequests = this.state.requests.map(request => (
-      <div key={request._id}>
-        <h3>{request.firstname}</h3>
-        <p>{request.lastname}</p>
-        <h3>{request.instrument}</h3>
-        <h3>{request.genre}</h3>
-        <h3>{request.example}</h3>
+    const mapRequests = this.props.requests.map(props => (
+      <div key={props._id}>
+        <h3>{props.firstname}</h3>
+        <p>{props.lastname}</p>
+        <h3>{props.instrument}</h3>
+        <h3>{props.genre}</h3>
+        <h3>{props.example}</h3>
       </div>
     ));
     
@@ -35,9 +35,9 @@ class RequestList extends Component {
 }
 
 RequestList.propTypes = {
-  loadMusicians: PropTypes.func.isRequired,
-  musicians: PropTypes.array.isRequired,
-  newMusician: PropTypes.object
+  loadRequests: PropTypes.func.isRequired,
+  requests: PropTypes.array.isRequired,
+  newRequest: PropTypes.object
 };
 
 export default RequestList;

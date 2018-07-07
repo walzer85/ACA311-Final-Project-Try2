@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import MusicianListContainer from '../containers/MusicianListContainer';
 
 class MusicianList extends Component {
+  
   componentWillMount() {
     this.props.musiciansLoaded
-  }
+  } 
 
   // reading about this to learn more, looks like it needs to be replaced with componentDidUpdate
   // componentWillReceiveProps(nextProps) {
@@ -15,13 +17,13 @@ class MusicianList extends Component {
   
   render() {
     
-    const mapMusicians = this.state.musicians.map(musician => (
-      <div key={musician._id}>
-        <h3>{musician.firstname}</h3>
-        <p>{musician.lastname}</p>
-        <h3>{musician.instrument}</h3>
-        <h3>{musician.genre}</h3>
-        <h3>{musician.example}</h3>
+    const mapMusicians = this.props.musicians.map(props => (
+      <div key={props._id}>
+        <h3>{props.firstname}</h3>
+        <p>{props.lastname}</p>
+        <h3>{props.instrument}</h3>
+        <h3>{props.genre}</h3>
+        <h3>{props.example}</h3>
       </div>
     ));
     
@@ -36,9 +38,6 @@ class MusicianList extends Component {
 MusicianList.propTypes = {
   loadMusicians: PropTypes.func.isRequired,
   musicians: PropTypes.array.isRequired,
-  newMusician: PropTypes.object
 };
 
 export default MusicianList;
-
-//I still have lots of work to do.  In its current state it is a boilerplate list displaying in a collapsable nav.

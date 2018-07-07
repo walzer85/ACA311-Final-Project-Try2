@@ -5,6 +5,9 @@ import React, { Component } from 'react';
 import MusicianListContainer from "./containers/MusicianListContainer";
 import { Row } from "react-bootstrap";
 import './App.css';
+import Header from './components/Header';
+import NewMusician from './components/NewMusician';
+import NewRequest from './components/NewRequest';
 
 const rowMarginBottom = {
   marginBottom: '20px'
@@ -20,11 +23,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Row style={rowMarginBottom}><Header /></Row>
+        {/* <Row style={rowMarginBottom}>*/}
+        <Header />
+        {/* </Row>
         
-        <Row style={NewMusicianMargins}><NewMusician /></Row>
-        <NewRequest /> */}
-        <Row><MusicianListContainer /></Row>
+        <Row style={NewMusicianMargins}>*/}
+        <NewMusician />
+       {/*} </Row>*/}
+        <NewRequest />
+        {/*<Row><MusicianListContainer /></Row> */}
       </div>
     );
   }

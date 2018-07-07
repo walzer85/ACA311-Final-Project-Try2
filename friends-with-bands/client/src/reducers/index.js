@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 
 // The function for what to load on MUSICIANS_LOADED
 function musicians(state=[], action){
-  if(action.type = "MUSICIANS_LOADED"){
+  if(action.type === "MUSICIANS_LOADED"){
     return action.value;
   }
   return state;
@@ -10,7 +10,7 @@ function musicians(state=[], action){
 
 // The function for what to load on REQUESTS_LOADED
 function requests(state=[], action){
-  if(action.type = "REQUESTS_LOADED"){
+  if(action.type === "REQUESTS_LOADED"){
     return action.value;
   }
   return state;
@@ -38,7 +38,6 @@ function manageRequests(state =[], action){
   return state;
 }
 
-debugger;
 
 const rootReducer = combineReducers({
   musicians, requests, manageMusicians, manageRequests

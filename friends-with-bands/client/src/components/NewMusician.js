@@ -7,7 +7,7 @@ class NewMusician extends Component {
 
     this.handleChange = this.handleChange.bind(this);
 
-    this.state = {
+    this.props = {
       fisrtName: '',
       lastName: '',
       email: '',
@@ -21,9 +21,13 @@ class NewMusician extends Component {
     this.setState({ value: e.target.value });
   }
 
+  handleSubmit(e) {
+    alert ('Thank you for your submission!');
+  }
+
   render() {
     return (
-      <Form horizontal>
+      <Form className='New-musician' horizontal>
         <FormGroup controlId="formHorizontalFirstName">
           <Col componentClass={ControlLabel} sm={2}>
             First Name:
@@ -31,7 +35,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="text"
-              value={this.state.fisrtName}
+              value={this.props.fisrtName}
               placeholder="Enter text"
               onChange={this.handleChange}  />
           </Col>
@@ -44,7 +48,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="text"
-              value={this.state.lastName}
+              value={this.props.lastName}
               placeholder="Enter text"
               onChange={this.handleChange} />
           </Col>
@@ -57,7 +61,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="text"
-              value={this.state.lastName}
+              value={this.props.lastName}
               placeholder="Enter text"
               onChange={this.handleChange} />
           </Col>
@@ -70,7 +74,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="text"
-              value={this.state.instrument}
+              value={this.props.instrument}
               placeholder="Enter text"
               onChange={this.handleChange} />
           </Col>
@@ -83,7 +87,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="text"
-              value={this.state.genre}
+              value={this.props.genre}
               placeholder="Enter text"
               onChange={this.handleChange} />
           </Col>
@@ -96,7 +100,7 @@ class NewMusician extends Component {
           <Col sm={4}>
             <FormControl 
               type="link"
-              value={this.state.instrument}
+              value={this.props.instrument}
               placeholder="URL Here"
               onChange={this.handleChange} />
           </Col>

@@ -1,7 +1,9 @@
-/* .App {
-  text-align: center;
+.App {
+	text-align: center;
+	background-color:  #ceffce;
 }
 
+/*
 .logo {
   height: 100px;
 }
@@ -100,3 +102,7 @@ body {
 .navbar {
   background-color: #0E689B;
 } */
+
+.New-musician {
+	margin-top: 50px;
+}
