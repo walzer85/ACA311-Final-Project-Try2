@@ -23,7 +23,7 @@ class NewRequest extends Component {
 
   render() {
     return (
-      <div>
+      <div className='New-request'>
         <h2>Let Musicians Know What You're Looking For</h2>
         <p>Tell everyone what you want to add to your style.  If you are looking for more than one instrument, separate them with commas.  You can use a brief description for your genre as well as just the name of the genre.</p>
         <Form horizontal>
