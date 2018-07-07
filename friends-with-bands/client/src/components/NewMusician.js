@@ -27,91 +27,95 @@ class NewMusician extends Component {
 
   render() {
     return (
-      <Form className='New-musician' horizontal>
-        <FormGroup controlId="formHorizontalFirstName">
-          <Col componentClass={ControlLabel} sm={2}>
-            First Name:
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="text"
-              value={this.props.fisrtName}
-              placeholder="Enter text"
-              onChange={this.handleChange}  />
-          </Col>
-        </FormGroup>
+      <div className='New-musician'>
+        <h2>Let People Know You're Looking For A Band</h2>
+        <p>Tell everyone a little about yourself.  If you play more than one instrument, separate them with commas.  The same applies to genre.</p>
+        <Form horizontal>
+          <FormGroup controlId="formHorizontalFirstName">
+            <Col componentClass={ControlLabel} sm={2}>
+              First Name:
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="text"
+                value={this.props.fisrtName}
+                placeholder="Enter text"
+                onChange={this.handleChange}  />
+            </Col>
+          </FormGroup>
 
-        <FormGroup controlId="formHorizontalLastName">
-          <Col componentClass={ControlLabel} sm={2}>
-            Last Name:
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="text"
-              value={this.props.lastName}
-              placeholder="Enter text"
-              onChange={this.handleChange} />
-          </Col>
-      </FormGroup>
-
-      <FormGroup controlId="formHorizontalEmail">
-          <Col componentClass={ControlLabel} sm={2}>
-            Email Address (Will Not Be Displayed):
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="text"
-              value={this.props.lastName}
-              placeholder="Enter text"
-              onChange={this.handleChange} />
-          </Col>
-        </FormGroup>
-
-      <FormGroup controlId="formHorizontalEmail">
-          <Col componentClass={ControlLabel} sm={2}>
-            Instrument Desired:
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="text"
-              value={this.props.instrument}
-              placeholder="Enter text"
-              onChange={this.handleChange} />
-          </Col>
+          <FormGroup controlId="formHorizontalLastName">
+            <Col componentClass={ControlLabel} sm={2}>
+              Last Name:
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="text"
+                value={this.props.lastName}
+                placeholder="Enter text"
+                onChange={this.handleChange} />
+            </Col>
         </FormGroup>
 
         <FormGroup controlId="formHorizontalEmail">
-          <Col componentClass={ControlLabel} sm={2}>
-            Genre:
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="text"
-              value={this.props.genre}
-              placeholder="Enter text"
-              onChange={this.handleChange} />
-          </Col>
-        </FormGroup>
+            <Col componentClass={ControlLabel} sm={2}>
+              Email Address (Will Not Be Displayed):
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="text"
+                value={this.props.lastName}
+                placeholder="Enter text"
+                onChange={this.handleChange} />
+            </Col>
+          </FormGroup>
 
         <FormGroup controlId="formHorizontalEmail">
-          <Col componentClass={ControlLabel} sm={2}>
-            Link to a page of your Band:
-          </Col>
-          <Col sm={4}>
-            <FormControl 
-              type="link"
-              value={this.props.instrument}
-              placeholder="URL Here"
-              onChange={this.handleChange} />
-          </Col>
-        </FormGroup>
+            <Col componentClass={ControlLabel} sm={2}>
+              Instrument(s):
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="text"
+                value={this.props.instrument}
+                placeholder="Enter text"
+                onChange={this.handleChange} />
+            </Col>
+          </FormGroup>
 
-        <FormGroup>
-          <Col smOffset={2} sm={10}>
-            <Button type="submit">Add Me</Button>
-          </Col>
-        </FormGroup>
-      </Form>
+          <FormGroup controlId="formHorizontalEmail">
+            <Col componentClass={ControlLabel} sm={2}>
+              Genre(s):
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="text"
+                value={this.props.genre}
+                placeholder="Enter text"
+                onChange={this.handleChange} />
+            </Col>
+          </FormGroup>
+
+          <FormGroup controlId="formHorizontalEmail">
+            <Col componentClass={ControlLabel} sm={2}>
+              Link to a page of your Band:
+            </Col>
+            <Col sm={4}>
+              <FormControl 
+                type="link"
+                value={this.props.instrument}
+                placeholder="URL Here"
+                onChange={this.handleChange} />
+            </Col>
+          </FormGroup>
+
+          <FormGroup>
+            <Col smOffset={0} sm={3}>
+              <Button type="submit">Add Me</Button>
+            </Col>
+          </FormGroup>
+        </Form>
+      </div>
     )
   }
 }
