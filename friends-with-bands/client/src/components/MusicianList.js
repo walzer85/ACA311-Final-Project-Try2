@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import MusicianListContainer from '../containers/MusicianListContainer';
 
 class MusicianList extends Component {
+  constructor(props) {
+    super(props);    
+  }
   
   componentWillMount() {
     this.props.musiciansLoaded

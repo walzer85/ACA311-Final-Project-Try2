@@ -1,6 +1,6 @@
-import mongoose from 'mongooes';
+let mongoose = require('mongoose');
 const fs = require("fs");
-const express = require("express");
+let express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());

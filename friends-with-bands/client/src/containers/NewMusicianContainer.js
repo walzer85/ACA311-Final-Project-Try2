@@ -15,5 +15,5 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-const NewMusicianListContainer =  connect(mapStateToProps, mapDispatchToProps)(newMusicianList);
+const NewMusicianListContainer =  connect(mapStateToProps, mapDispatchToProps)(NewMusician);
 export default NewMusicianListContainer;

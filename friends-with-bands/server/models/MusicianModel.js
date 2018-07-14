@@ -27,7 +27,7 @@ const schema = new mongoose.Schema({
   },
   example: {
     required: false,
-    type: URL
+    type: String
   }
 });
 

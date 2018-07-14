@@ -15,5 +15,5 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-const NewRequestListContainer =  connect(mapStateToProps, mapDispatchToProps)(newRequestList);
+const NewRequestListContainer =  connect(mapStateToProps, mapDispatchToProps)(NewRequest);
 export default NewRequestListContainer;

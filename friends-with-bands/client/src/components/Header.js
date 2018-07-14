@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -14,8 +15,8 @@ class Header extends Component {
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Navbar.Collapse>
-                        <Nav pullRight><NavItem eventKey={1} href="#musicians">Looking for a Musician</NavItem></Nav>
-                        <Nav pullRight><NavItem eventKey={2} href="#bands">Looking for a Band</NavItem></Nav>
+                        <Nav pullRight><NavItem eventKey={1}><Link to={'/musicians'}>Looking for a Musician</Link></NavItem></Nav>
+                        <Nav pullRight><NavItem eventKey={2}><Link to={'/requests'}>Looking for a Band</Link></NavItem></Nav>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

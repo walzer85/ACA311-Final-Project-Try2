@@ -1,38 +1,40 @@
 import React, { Component } from 'react';
-// import Header from "./components/Header"
-// import NewMusician from "./components/NewMusician"
-// import NewRequest from './components/NewRequest';
+import Header from "./components/Header"
+import NewMusicianContainer from "./containers/NewMusiciantainer"
+import NewRequestContainer from './components/NewRequestContainer';
 import MusicianListContainer from "./containers/MusicianListContainer";
-import { Row } from "react-bootstrap";
+import RequestListContainer from "./containers/RequestListContainer";
 import './App.css';
-import Header from './components/Header';
-import NewMusician from './components/NewMusician';
-import NewRequest from './components/NewRequest';
+import {
+  Route,
+  Switch
+} from "react-router-dom";
 
-const rowMarginBottom = {
-  marginBottom: '20px'
-}
-
-// const NewMusicianMargins = {
-//   marginTop: '80px',
-//   marginLeft: "20px",
-//   borderStyle: 
-// }
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/* <Row style={rowMarginBottom}>*/}
-        <Header />
-        {/* </Row>
-        
-        <Row style={NewMusicianMargins}>*/}
-        <NewMusician />
-       {/*} </Row>*/}
-        <NewRequest />
-        {/*<Row><MusicianListContainer /></Row> */}
-      </div>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route path='/musicians' render={ (props) => {
+              return (
+                <div>
+                  <MusicianListContainer />
+                  <NewMusicianContainer />
+                </div>
+              );
+            }} />
+            <Route path='/requests' render={ (props) => {
+              return (
+                <div>
+                  <RequestListContainer />
+                  <NewRequestContainer />
+                </div>
+              );
+            }} />
+          </Switch>
+        </div>
     );
   }
 }
